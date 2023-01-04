@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitXY"
+        android:id="@+id/videoThumbNail"
+        android:src="@drawable/ic_home"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_explore"
+            app:civ_border_color="#fff"
+            app:civ_border_width="2dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/videoPublisherPhoto" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/videoPublisherPhoto"
+            android:layout_marginLeft="5dp"
+            android:maxLines="2"
+            android:textColor="#131313"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:id="@+id/videoTitle"
+            android:textStyle="bold"
+            android:text="This is the video Description This is the video Description"
+            android:layout_toEndOf="@id/videoPublisherPhoto"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Youtube Channel"
+            android:id="@+id/channelName"
+            android:paddingTop="5dp"
+            android:layout_below="@id/videoTitle"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/videoPublisherPhoto"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/videoPublisherPhoto"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12k views"
+            android:padding="5dp"
+            android:layout_below="@id/videoTitle"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/channelName"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/videoViews"
+            android:layout_toRightOf="@id/channelName"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7 months ago"
+            android:id="@+id/videoDate"
+            android:padding="5dp"
+            android:layout_below="@id/videoTitle"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/videoViews"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/videoViews"
+            android:layout_marginStart="5dp" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

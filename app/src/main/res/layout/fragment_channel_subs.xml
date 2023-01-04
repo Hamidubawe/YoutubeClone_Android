@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ChannelSubsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmer_layout"
+            app:shimmer_duration="1200">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+
+            </LinearLayout>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/channelUploads"
+            android:visibility="gone"
+            android:layout_margin="7dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

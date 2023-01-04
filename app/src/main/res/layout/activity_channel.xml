@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChannelActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:id="@+id/channelToolbar"
+            app:title="Channel Name"
+            app:titleTextColor="@color/colorPrimaryDark"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/channelTabLayout"
+            android:background="@color/colorAccent"
+            app:tabMode="scrollable"
+            app:tabTextColor="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/colorPrimaryDark" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager"/>
+
+
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:paddingBottom="25dp"
+        app:menu_animationDelayPerItem="55"
+        app:menu_buttonSpacing="0dp"
+        app:menu_colorNormal="@color/gnt_red"
+        app:menu_colorPressed="#444"
+        app:menu_labels_cornerRadius="3dp"
+        app:menu_labels_ellipsize="none"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        app:menu_fab_hide_animation="@anim/fab_slide_in_from_right"
+        app:menu_labels_maxLines="-1"
+        android:padding="8dp"
+        app:menu_labels_position="left"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="@color/colorAccent"
+        app:menu_openDirection="up"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/gnt_red"
+            app:fab_colorPressed="@color/colorAccent"
+            app:fab_label="Upload Music"
+            android:src="@drawable/ic_library"
+            android:id="@+id/addVideoBtn"
+            android:padding="5dp"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_add_video"
+            android:id="@+id/addPlaylist"
+            android:padding="5dp"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/gnt_red"
+            app:fab_colorPressed="@color/colorAccent"
+            app:fab_label="Add playlist"/>
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</RelativeLayout>

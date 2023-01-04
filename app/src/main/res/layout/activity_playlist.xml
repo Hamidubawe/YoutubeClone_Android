@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaylistActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/colorBlack"
+        app:title="Playlist name"
+        android:id="@+id/playlistToolbar"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#efefef">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is the playlist name"
+            android:id="@+id/playlistName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:layout_marginTop="5dp"
+            android:id="@+id/playlistDesc"
+            android:text="This is the playlist Desc This is the playlist Desc This is the playlist Desc"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmer_layout"
+            app:shimmer_duration="1200">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+
+                <include
+                    layout="@layout/playlist_shimmer"/>
+
+
+            </LinearLayout>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/channelUploads"
+            android:visibility="gone"
+            android:layout_margin="7dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

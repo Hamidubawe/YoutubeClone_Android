@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadVideoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Video Title"
+                android:textColorHint="@color/gnt_black"
+                android:id="@+id/videoTitle"
+                android:background="@drawable/editextstyle"
+                android:padding="10dp"
+                android:maxLength="100"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:hint="Video Description"
+                android:textColorHint="@color/gnt_black"
+                android:id="@+id/videoDescription"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:background="@drawable/editextstyle"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Playlist"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/playlistSpinner"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/choseThumbNailBtn"
+                    android:text="Add Thumbnail"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:padding="5dp"/>
+
+                <!--<Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/choseVideoBtn"
+                    android:layout_toEndOf="@id/choseThumbNailBtn"
+                    android:text="Upload Video"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_toRightOf="@id/choseThumbNailBtn"
+                    android:layout_marginLeft="30dp" />-->
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:id="@+id/thumbnail"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_explore"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Category"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/videoCategory"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Video"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/publishVideoBtn"
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

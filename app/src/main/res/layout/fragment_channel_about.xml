@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Fragments.ChannelAboutFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:id="@+id/bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Channel information"
+        android:layout_below="@id/bold"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/aboutDesc"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aboutDesc"
+        android:textAlignment="center"
+        android:id="@+id/dateJoined"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/gnt_black"
+        android:text="Date joined"
+        android:gravity="center_horizontal" />
+
+</RelativeLayout>

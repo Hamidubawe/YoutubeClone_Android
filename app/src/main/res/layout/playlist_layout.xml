@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:id="@+id/playlistImg"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_play"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is the description This is the description This is the description"
+        android:layout_toEndOf="@+id/playlistImg"
+        android:layout_toRightOf="@+id/playlistImg"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:textColor="@color/gnt_black"
+        android:id="@+id/descriptionPlaylist"
+        android:textSize="18sp"
+        android:maxLines="2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12k views"
+        android:padding="5dp"
+        android:layout_below="@id/descriptionPlaylist"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/playlistImg"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/videoViews"
+        android:layout_toRightOf="@id/descriptionPlaylist"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7 months ago"
+        android:id="@+id/videoDate"
+        android:padding="5dp"
+        android:layout_below="@id/descriptionPlaylist"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/videoViews"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/videoViews"
+        android:layout_marginStart="5dp" />
+
+</RelativeLayout>

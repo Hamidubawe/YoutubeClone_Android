@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/mainActivityToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YouTube"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_explore"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/userPhoto"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true" />
+
+            <SearchView
+                android:layout_width="wrap_content"
+                android:layout_toStartOf="@id/userPhoto"
+                android:icon="@drawable/ic_search_black_24dp"
+                app:actionViewClass="android.widget.SearchView"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/userPhoto" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameLayout"
+        android:layout_below="@id/mainActivityToolbar"
+        android:layout_above="@id/bottom_nav"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchRecycler"
+        android:layout_below="@id/mainActivityToolbar"
+        android:visibility="gone"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:labelVisibilityMode="labeled"
+        android:id="@+id/bottom_nav"
+        app:itemTextColor="@drawable/selsctor"
+        app:itemIconTint="@drawable/selsctor"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</RelativeLayout>

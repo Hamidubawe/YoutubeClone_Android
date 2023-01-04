@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ChannelHomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@color/gnt_gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/channelInfoLayout"
+            android:background="#efefef">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_explore"
+                app:civ_border_color="#fff"
+                app:civ_border_width="2dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/videoPublisherPhoto" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/videoPublisherPhoto"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:textSize="20sp"
+                android:id="@+id/channelName"
+                android:textStyle="bold"
+                android:text="Hamidu Bawee"
+                android:textColor="#131313"
+                android:layout_toEndOf="@id/videoPublisherPhoto"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12M Subscribers"
+                android:id="@+id/channelSubscribers"
+                android:layout_below="@id/channelName"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/videoPublisherPhoto"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/videoPublisherPhoto"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading"
+                android:textSize="17sp"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:layout_toStartOf="@id/bellIcon"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                android:id="@+id/subscribeBtn"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/channelSubscribers"
+                android:layout_toLeftOf="@id/bellIcon"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/videoPublisherPhoto"
+                android:layout_toRightOf="@id/videoPublisherPhoto"
+                android:layout_marginLeft="5dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_notifications"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/bellIcon"
+                android:visibility="gone"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_settings"
+                android:id="@+id/settingBtn"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Uploads"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/gnt_black"
+            android:layout_margin="7dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shimmer_layout"
+                app:shimmer_duration="1200">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/playlist_shimmer"/>
+
+                    <include
+                        layout="@layout/playlist_shimmer"/>
+
+                    <include
+                        layout="@layout/playlist_shimmer"/>
+
+                    <include
+                        layout="@layout/playlist_shimmer"/>
+
+
+                    <include
+                        layout="@layout/playlist_shimmer"/>
+
+
+                </LinearLayout>
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/channelUploads"
+                android:visibility="gone"
+                android:layout_margin="7dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

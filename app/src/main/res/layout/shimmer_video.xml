@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitXY"
+        android:id="@+id/videoThumbNail"
+        android:background="#595656"
+        android:src="@drawable/ic_home"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:civ_border_color="#fff"
+            android:background="#595656"
+            app:civ_border_width="2dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/videoPublisherPhoto" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_toRightOf="@id/videoPublisherPhoto"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="20dp"
+            android:background="#595656"
+            android:id="@+id/videoTitle"
+            android:layout_toEndOf="@id/videoPublisherPhoto"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="20dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_below="@id/videoTitle"
+            android:layout_marginTop="10dp"
+            android:background="#595656"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@id/videoPublisherPhoto"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/videoPublisherPhoto"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="20dp" />
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

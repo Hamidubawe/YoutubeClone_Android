@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:id="@+id/playlistImg"
+        android:background="@color/gnt_gray"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="This is the description This is the description This is the description"
+        android:layout_toEndOf="@+id/playlistImg"
+        android:background="@color/gnt_gray"
+        android:layout_toRightOf="@+id/playlistImg"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:textColor="@color/gnt_black"
+        android:id="@+id/descriptionPlaylist"
+        android:textSize="18sp"
+        android:maxLines="2"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:background="@color/gnt_gray"
+        android:padding="5dp"
+        android:layout_below="@id/descriptionPlaylist"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/playlistImg"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/videoViews"
+        android:layout_toRightOf="@id/descriptionPlaylist"
+        android:layout_marginStart="5dp" />
+
+
+</RelativeLayout>

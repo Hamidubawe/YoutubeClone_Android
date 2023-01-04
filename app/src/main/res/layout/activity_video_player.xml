@@ -1,0 +1,303 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".VideoPlayerActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/videoPlayer"
+            android:layout_gravity="center_horizontal"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:maxLines="2"
+                    android:textSize="17sp"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/videoTitle"
+                    android:textStyle="bold"
+                    android:text="This is the video Description This is the video Description"
+                    android:layout_marginStart="5dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12k views"
+                    android:padding="5dp"
+                    android:layout_below="@id/videoTitle"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/videoViews"
+                    android:layout_marginStart="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7 months ago"
+                    android:padding="5dp"
+                    android:layout_below="@id/videoTitle"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/videoViews"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/videoDate"
+                    android:layout_toRightOf="@id/videoViews"
+                    android:layout_marginStart="5dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear"
+                android:layout_margin="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:id="@+id/likeBtn"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_like"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="123k"
+                        android:id="@+id/playNumbers"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_unlike"
+                        android:id="@+id/unlikeBtn"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="231"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/favouriteCount" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_share"
+                        android:id="@+id/shareVideoBtn"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Share"
+                        android:id="@+id/share"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/downloadBtn">
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_download"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Download"
+                        android:id="@+id/Download"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_library_add"
+                        android:id="@+id/saveBtn"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Save"
+                        android:layout_gravity="center_horizontal"
+
+                        android:id="@+id/likesCount" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#000"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/channelInfoLayout">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_explore"
+                    app:civ_border_color="#fff"
+                    app:civ_border_width="2dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/videoPublisherPhoto" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/videoPublisherPhoto"
+                    android:layout_marginLeft="5dp"
+                    android:maxLines="2"
+                    android:textSize="17sp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/channelName"
+                    android:textStyle="bold"
+                    android:text="Hamidu Bawee"
+                    android:textColor="#131313"
+                    android:layout_toEndOf="@id/videoPublisherPhoto"
+                    android:layout_marginStart="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12M Subscribers"
+                    android:id="@+id/channelSubscribers"
+                    android:layout_below="@id/channelName"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/videoPublisherPhoto"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/videoPublisherPhoto"
+                    android:layout_marginStart="5dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading"
+                    android:textSize="17sp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:layout_toStartOf="@id/bellIcon"
+                    android:layout_marginEnd="10dp"
+                    android:textStyle="bold"
+                    android:id="@+id/subscribeBtn"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/bellIcon"
+                    android:layout_alignParentRight="true" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_notifications"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/bellIcon"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#000"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relatedVideosRecycler"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
